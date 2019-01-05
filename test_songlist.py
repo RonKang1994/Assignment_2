@@ -30,13 +30,14 @@ assert len(song_list.songs) > 0  # assuming CSV file is not empty
 # print(song_list)
 
 # test adding a new Song
-"""add a new song"""
-song_list.add_song("Hello", "Art", 2012)
-print("New song added")
-print(song_list)
-
-# test get_song()
+# """add a new song"""
+# song_list.add_song("Hello", "Art", 2012)
+# print("New song added")
+# print(song_list)
 
 # test getting the number of required and learned songs (separately)
+# song_list.cal_learn_n_req()
 
 # test saving songs (check CSV file manually to see results)
+# """Test saving new songs"""
+# song_list.save_songs()

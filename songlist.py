@@ -43,6 +43,17 @@ class SongList(Song):
                 self.songs.append(song)
 
 
+    """Save the New List back to the CSV file"""
+    def save_songs(self):
+        song_file = open('songs.csv', 'w')
+        for song in self.songs:
+            if song.is_required:
+                print("{},{},{},{}".format(song.title, song.artist, song.year, 'y'), file=song_file)
+            else:
+                print("{},{},{},{}".format(song.title, song.artist, song.year, 'y'), file=song_file)
+        song_file.close()
+
+
     """Used to sort the song list is various ways"""
     def sort(self, sort_type):
         if sort_type == 1:
@@ -60,4 +71,18 @@ class SongList(Song):
     def add_song(self, title="", artist="", year=0):
         new_song = Song(title, artist, year, False)
         self.songs.append(new_song)
+
+
+    """Calculate the number of Learned and Required Songs"""
+    def cal_learn_n_req(self):
+        self.song_required = 0
+        self.song_learned = 0
+        for song in self.songs:
+            if song.is_required:
+                self.song_required += 1
+            else:
+                self.song_learned += 1
+        print("Lerned songs {}".format(self.song_learned))
+        print("Required songs {}".format(self.song_required))
+
 

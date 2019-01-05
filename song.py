@@ -14,7 +14,7 @@ class Song:
         else:
             return "\"{}\", {}, {}".format(self.title, self.artist, self.year)
 
-    """Mark the song as learned (change is_required to True)"""
+    """Mark the song as learned(change is_required to True)"""
     def mark_learned(self):
         if self.is_required:
             print("Alredy Learned")
