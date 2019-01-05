@@ -30,6 +30,10 @@ assert len(song_list.songs) > 0  # assuming CSV file is not empty
 # print(song_list)
 
 # test adding a new Song
+"""add a new song"""
+song_list.add_song("Hello", "Art", 2012)
+print("New song added")
+print(song_list)
 
 # test get_song()
 

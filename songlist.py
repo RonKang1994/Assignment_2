@@ -54,3 +54,10 @@ class SongList(Song):
         elif sort_type == 3:
             """3 Sort by Artist"""
             self.songs.sort(key=lambda Song: Song.artist)
+
+
+    """Used to add new songs"""
+    def add_song(self, title="", artist="", year=0):
+        new_song = Song(title, artist, year, False)
+        self.songs.append(new_song)
+
