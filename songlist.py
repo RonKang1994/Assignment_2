@@ -81,9 +81,7 @@ class SongList(Song):
                 self.song_required += 1
             else:
                 self.song_learned += 1
-        print("Lerned songs {}".format(self.song_learned))
-        print("Required songs {}".format(self.song_required))
-        text = "To learn: " + str(self.song_required) + ". Learned: " + str(self.song_learned)
+        text = "To learn: " + str(self.song_learned) + ". Learned: " + str(self.song_required)
         return text
 
 
