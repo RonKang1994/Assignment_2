@@ -16,6 +16,18 @@ assert len(song_list.songs) > 0  # assuming CSV file is not empty
 
 # TODO: add tests below to show the various required methods work as expected
 # test sorting songs
+# """Sort by Year"""
+# song_list.sort(1)
+# print("Year Sort")
+# print(song_list)
+# """Sort by Title"""
+# song_list.sort(2)
+# print("Title Sort")
+# print(song_list)
+# """Sort by Artist"""
+# song_list.sort(3)
+# print("Artist Sort")
+# print(song_list)
 
 # test adding a new Song
 
