@@ -5,44 +5,50 @@ BoxLayout:
         orientation: 'vertical'
         Label:
             text: 'Sort by:'
-        Button:
-            text: 'Year'
+        Spinner:
             id: sort_label
-            on_press: app.handle_sort()
+            text: app.current_state
+            values: app.sort_codes
+            on_text: app.handle_sort(self.text)
         Label:
             text: 'Add New Song....'
         Label:
             text: 'Title:'
         TextInput:
-            id: input_title
             text: ''
+            id: input_title
             # Centralize it
             padding: [10, (self.height-self.line_height)/2]
         Label:
             text: 'Artist:'
         TextInput:
-            id: input_title
             text: ''
+            id: input_artist
             # Centralize it
             padding: [10, (self.height-self.line_height)/2]
         Label:
             text: 'Year:'
         TextInput:
-            id: input_title
             text: ''
+            id: input_year
             # Centralize it
             padding: [10, (self.height-self.line_height)/2]
         Button:
             text: 'Add Song'
-            #on_press: app.handle_add_song()
-            on_press: app.add_song_button()
+            on_press: app.handle_add_song()
         Button:
             text: 'Clear'
             on_press: app.handle_clear()
     BoxLayout:
         orientation: 'vertical'
+        id: songs
+    BoxLayout:
+        orientation: 'vertical'
         Label:
-            text: 'Test'
-        Button:
-            id: songs
-            cols: 1
+            text: ''
+            id: req_learn
+            background_color: (1, 1, 0, 1)
+        Label:
+            text: ''
+            id: message_id
+            background_color: (1, 0, 1, 1)
